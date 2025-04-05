@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9</title>
+</head>
+
+<body>
+
+    <h1>Depósito</h1>
+
+    <script>
+       let deposito = parseFloat(prompt("Me diga o valor do depósito: "))
+       let taxa = parseFloat(prompt("Me diga a taxa mensal(em %)"))
+       let total = deposito * (((1+ taxa) ** 12-1) / taxa) * (1 + taxa) * (1 + taxa) /* ajusta o calculo*/
+
+       document.write("o valor do montante depois dos 12 meses é ${total.tofixed(2)}")
+
+    </script>
+
+</body>
+
+</html>
