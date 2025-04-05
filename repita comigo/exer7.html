@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer4</title>
+</head>
+
+<body>
+    <H1>Média entre números inteiros</H1>
+    <script>
+       let cont =1
+       let soma =0
+
+        while (cont <= 6) { /*contador*/
+            var nota = parseInt(prompt("Informe a nota do aluno de N" + cont))
+            
+
+            if (nota => 0 && nota <= 10) {
+                cont ++
+               soma += nota
+            }else{
+                document.write("a nota digitada está errada, digite a nota novamente")
+            }
+
+        }
+
+        let media = soma / 6
+
+        document.write("A média final do aluno é: " + media)
+    </script>
+</body>
+
+</html>

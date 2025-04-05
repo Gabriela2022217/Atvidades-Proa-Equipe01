@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n1 = parseInt(prompt("Digite um número: "))
+        let n2 = parseInt(prompt("Digite o segundo número: "))
+
+        while(n2 <= 0){ /*n2 precisa ser maior que zero*/
+            n2 = parseInt(prompt("O número digitado está incorreto, digite um número positivo maior que 0: "))
+        }
+        let div = n1/n2 /*divisão dos dois números*/
+
+        document.write("A divisão dos dois números apresentados é: " + div + "<br>")
+    </script>
+</body>
+</html>
