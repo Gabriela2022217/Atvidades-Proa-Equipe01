@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando troca de conteudo</title>
+
+    <style>
+      .fundo{
+        background-color: bisque;
+        color: "rgb(70,4,4)"; 
+        text-align: center;
+      }
+
+      .myImage{
+        width: 500px;
+        height: 400px;
+        margin: auto;
+      }
+
+
+
+    </style>
+</head>
+<body class="fundo">
+    <h1 id="titulo">Testando mudança de cor de fundo body, a cor da fonte e a imagem na página</h1>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel temporibus distinctio neque asperiores? Veniam alias inventore aspernatur. Ullam hic quisquam explicabo cupiditate neque dignissimos, recusandae tempore obcaecati illum maiores porro!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel temporibus distinctio neque asperiores? Veniam alias inventore aspernatur. Ullam hic quisquam explicabo cupiditate neque dignissimos, recusandae tempore obcaecati illum maiores porro!</p>
+
+    <input type="button" id="verde" value="tema verde" onclick="verde()" />
+    <input type="button" id="azul" value="tema azul"  onclick="azul()"/>
+    <input type="button" id="Home" value="Home" onclick="Home()"/>
+    <input type="button" id="Modo_escuro" value="Modo_escuro" onclick="Modo_escuro()"/>
+    <input type="button" id="Modo_daltônico" value="Modo_daltônico" onclick="Modo_daltônico()"/>
+    <input type="button" id="baixa_visão" value="Modo_baixa_visão" onclick="baixa_visão()"/>
+    <hr />
+
+    <img src="imagens/fundo.jpg" class="myImage" alt="Uma estrada dentro da floresta" />
+
+    
+    <script>
+
+        let texto = document.getElementById("titulo");
+
+         /*pega qualquer componente pelo nome*/
+        function verde(){ /*function, função*/
+            let texto = document.getElementById("titulo");
+            document.querySelector(".fundo").style.backgroundColor="green";
+            document.querySelector(".fundo").style.Color="white"; 
+            document.querySelector(".myImage").src="imagens/fundo3.jpg";
+
+            texto.innerHTML = "Testando a função VERDE!!!" /*inner dentro do html*/
+        }
+        function azul(){
+            document.querySelector(".fundo").style.backgroundColor="blue";
+            document.querySelector(".fundo").style.Color="white"; 
+            document.querySelector(".myImage").src="imagens/imagem4.jpg";
+            texto.innerHTML = "Testando a função azul!!!"
+        }
+        function Home(){
+            document.querySelector(".fundo").style.backgroundColor="bisque";
+            document.querySelector(".fundo").style.Color="rgb(70,4,4)"; 
+            document.querySelector(".myImage").src="imagens/fundo.jpg";
+            texto.innerHTML = "Testando mudança de cor de fundo body, a cor da fonte e a imagem na página!!!"
+        }
+        function Modo_escuro(){
+            document.querySelector(".fundo").style.backgroundColor="black";
+            document.querySelector(".fundo").style.Color="rgb(70,4,4)"; 
+            document.querySelector(".myImage").src="imagens/fundo.jpg";
+            document.querySelector(".fundo").style.fontSize="15px"; 
+            texto.innerHTML = "Testando o modo escuro!!!"
+        }
+        function Modo_daltônico(){
+            document.querySelector(".fundo").style.backgroundColor="rgb(228, 62, 228, 0.91)";
+            document.querySelector(".fundo").style.Color="white"; 
+            document.querySelector(".myImage").src="imagens/daltonismo.jpg";
+            texto.innerHTML = "Testando o modo daltônico!!"
+        }
+           function baixa_visão(){
+            document.querySelector(".fundo").style.backgroundColor="white";
+            document.querySelector(".fundo").style.Color="white"; 
+            document.querySelector(".fundo").style.fontSize="30px"; 
+            texto.innerHTML = "Testando o modo de baixa visão!!"
+        }
+    </script>
+</body>
+</html>
